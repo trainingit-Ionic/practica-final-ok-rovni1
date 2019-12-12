@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="" icon="home"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Compras Guardadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of archivedTodos; let i = index">
+        <ion-item-options side="end">
+            <ion-button color="danger" (click)="deleteItem(i)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item-options>
+    <ion-item>{{item}}</ion-item>   
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
